@@ -21,5 +21,9 @@ public class Config
      */
     public static final boolean NEED_TO_CLOSE_BROWSER_AFTER_TEST=false;
 
+    /**
+     * Run tests with headless
+     */
+    protected static final boolean IS_HEADLESS=true;
 
 }
