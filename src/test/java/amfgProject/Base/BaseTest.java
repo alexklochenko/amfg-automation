@@ -16,13 +16,14 @@ public class BaseTest
 {
     WebDriver driver= DriverUtils.createDriver();
 
-    AuthFePage authFePage =new AuthFePage(driver);
-    CatalogueFePage catalogueFePage=new CatalogueFePage(driver);
-    DashboardFePage dashboardFePage=new DashboardFePage(driver);
-    InstantQuoteFePage instantQuoteFePage=new InstantQuoteFePage(driver);
-    MyListFePage myListFePage=new MyListFePage(driver);
-    ProjectsFePage projectsFePage=new ProjectsFePage(driver);
-    QuotesFePage quotesFePage=new QuotesFePage(driver);
+    public BasePage basePage=new BasePage(driver);
+    public AuthFePage authFePage =new AuthFePage(driver);
+    public CatalogueFePage catalogueFePage=new CatalogueFePage(driver);
+    public DashboardFePage dashboardFePage=new DashboardFePage(driver);
+    public InstantQuoteFePage instantQuoteFePage=new InstantQuoteFePage(driver);
+    public MyListFePage myListFePage=new MyListFePage(driver);
+    public ProjectsFePage projectsFePage=new ProjectsFePage(driver);
+    public QuotesFePage quotesFePage=new QuotesFePage(driver);
 
 
 

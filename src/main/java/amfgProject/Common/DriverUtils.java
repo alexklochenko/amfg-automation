@@ -27,10 +27,12 @@ public class DriverUtils
             switch (DRIVER_INDEX)
             {
                 case 1:
+                    System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
                     driver=new ChromeDriver();
                     break;
 
                 case 2:
+                    System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver.exe");
                     driver=new FirefoxDriver();
                     break;
 
