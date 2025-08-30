@@ -1,4 +1,12 @@
 package amfgProject.Pages.AmfgFE;
 
-public class ProjectsFePage {
+import org.openqa.selenium.WebDriver;
+
+public class ProjectsFePage
+{
+    WebDriver driver;
+    public ProjectsFePage (WebDriver driver)
+    {
+        this.driver=driver;
+    }
 }

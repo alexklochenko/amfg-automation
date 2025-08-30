@@ -1,4 +1,5 @@
 package amfgProject.Common;
 
-public class ElementHelper {
+public class ElementHelper
+{
 }
