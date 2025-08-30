@@ -1,4 +1,5 @@
 package amfgProject.Common;
 
-public class CommonActions {
+public class UserActions
+{
 }

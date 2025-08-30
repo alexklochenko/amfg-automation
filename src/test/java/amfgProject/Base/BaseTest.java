@@ -1,4 +1,4 @@
-package Base;
+package amfgProject.Base;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.TestInstance;

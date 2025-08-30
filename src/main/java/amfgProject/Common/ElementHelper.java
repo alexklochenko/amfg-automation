@@ -1,5 +1,4 @@
 package amfgProject.Common;
 
-public class DriverUtils
-{
+public class ElementHelper {
 }
