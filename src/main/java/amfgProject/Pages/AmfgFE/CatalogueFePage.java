@@ -1,5 +1,4 @@
 package amfgProject.Pages.AmfgFE;
 
-public class DashboardFe
-{
+public class CatalogueFePage {
 }
