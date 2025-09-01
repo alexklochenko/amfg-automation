@@ -12,7 +12,7 @@ public class Config
     /**
      *Environments URL
      */
-    public static final String MAIN_FE_URL="https://demo.amfg.ai/new/stage/nataliiaakoieva.html";
+    public static final String MAIN_FE_URL="https://demo.amfg.ai/new/next/nataliiaakoieva.html";
     public static final String MAIN_MC_URL=null;
     public static final String MAIN_AC_URL=null;
 
@@ -24,6 +24,6 @@ public class Config
     /**
      * Run tests with headless
      */
-    protected static final boolean IS_HEADLESS=true;
+    protected static final boolean IS_HEADLESS=false;
 
 }

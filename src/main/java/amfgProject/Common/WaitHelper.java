@@ -14,7 +14,7 @@ public class WaitHelper
     /**
      * Wait methods for visibility Of Element Located
      */
-    public static WebElement WaitVisibilityOfElementLocated (WebDriver driver, By loctor, int time)
+    public static WebElement waitVisibilityOfElementLocated (WebDriver driver, By loctor, int time)
     {
         return (new WebDriverWait(driver, Duration.ofSeconds(time))).until(ExpectedConditions.visibilityOfElementLocated(loctor));
     }
@@ -23,9 +23,18 @@ public class WaitHelper
     /**
      * Wait methods for invisibility of Element presented on the page
      */
-    public static boolean WaitForInvisibilityOfElementLocated2(WebDriver driver, By loctor, int time)
+    public static boolean waitForInvisibilityOfElementLocated (WebDriver driver, By locator, int time)
     {
-        return (new WebDriverWait(driver, Duration.ofSeconds(time))).until(ExpectedConditions.invisibilityOfElementLocated(loctor));
+        return (new WebDriverWait(driver, Duration.ofSeconds(time))).until(ExpectedConditions.invisibilityOfElementLocated(locator));
+    }
+
+    /**
+     * Wait method: wait until the element contains the expected text.
+     */
+
+    public static boolean waitForTextAtElement (WebDriver driver, By locator, int time, String checkText)
+    {
+        return ((new WebDriverWait(driver, Duration.ofSeconds(time)).until(ExpectedConditions.textToBe(locator, checkText))));
     }
 
 
