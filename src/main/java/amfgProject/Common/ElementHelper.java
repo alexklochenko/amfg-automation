@@ -11,6 +11,10 @@ import java.time.Duration;
 
 public class ElementHelper
 {
+
+    /**
+     *Check element visibility on the page
+     */
     public static boolean isElementVisible(WebDriver driver, By locator, int time)
     {
         try
@@ -23,12 +27,26 @@ public class ElementHelper
         }
     }
 
+    /**
+     * Send key to input field
+     */
     public static void sendKeysToInputField (WebDriver driver, By locator, String inputValue)
     {
         WebElement element=driver.findElement(locator);
         element.clear();
         element.sendKeys(inputValue);
     }
+
+    /**
+     * Get text from element
+     */
+
+    public static String getTextFromElement (WebDriver driver, By locator)
+    {
+        WebElement element =driver.findElement(locator);
+        return element.getText();
+    }
+
 
 
 }

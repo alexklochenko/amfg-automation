@@ -15,30 +15,14 @@ public class UserActions
     /**
      * Check user sign in
      */
-    public static boolean checkUserIsSignIn(WebDriver driver, By locator, int time)
-    {
-        try
-        {
-            if(WaitHelper.waitForTextAtElement(driver, locator, time, "SIGN IN"))
-            {
-                return true;
-            }
-            else
-            {
-                logger.info("User is not sign in");
-                return false;
-            }
+    public static boolean checkUserIsSignOut(WebDriver driver, By locator, int time) {
+        try {
+            WaitHelper.waitVisibilityOfElementLocated(driver, locator, time);
+            return true;
+        } catch (TimeoutException e) {
+            logger.error("Sign in button is not present on the page");
+            return false;
         }
-        catch (TimeoutException e)
-        {
-            logger.error("Sine in button out of page");
-            throw new TimeoutException("Sine in button out of page");
-
-        }
-
-
     }
-
-
 
 }
