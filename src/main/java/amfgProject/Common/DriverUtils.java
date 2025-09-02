@@ -2,6 +2,7 @@ package amfgProject.Common;
 
 import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -64,11 +65,27 @@ public class DriverUtils
                     throw new UnsupportedOperationException("Unsupported driver type");
 
             }
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(90));
-            driver.manage().window().setSize(new Dimension(1980,980));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.manage().window().setSize(new Dimension(1500,980));
 
             return driver;
         }
+
+
+        public static void clearAllCookies (WebDriver driver)
+        {
+            driver.manage().deleteAllCookies();
+        }
+
+
+        public static void clearLocalAndSessionStorage (WebDriver driver)
+        {
+            JavascriptExecutor javascriptExecutor=(JavascriptExecutor) driver;
+            javascriptExecutor.executeScript("window.sessionStorage.clear()");
+            javascriptExecutor.executeScript("window.localStorage.clear()");
+
+        }
+
 
 
 

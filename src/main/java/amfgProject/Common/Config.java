@@ -19,7 +19,7 @@ public class Config
     /**
      * Need to close browser after test end
      */
-    public static final boolean NEED_TO_CLOSE_BROWSER_AFTER_TEST=false;
+    public static final boolean NEED_TO_CLOSE_BROWSER_AFTER_TEST=true;
 
     /**
      * Run tests with headless

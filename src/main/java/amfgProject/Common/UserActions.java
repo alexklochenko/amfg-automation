@@ -15,9 +15,9 @@ public class UserActions
     /**
      * Check user sign in
      */
-    public static boolean checkUserIsSignOut(WebDriver driver, By locator, int time) {
+    public static boolean checkUserIsSignOut(WebDriver driver, By locator, By frameLocator, int time) {
         try {
-            WaitHelper.waitVisibilityOfElementLocated(driver, locator, time);
+            WaitHelper.waitVisibilityOfElementLocatedAtFrame(driver, locator, frameLocator, time);
             return true;
         } catch (TimeoutException e) {
             logger.error("Sign in button is not present on the page");

@@ -19,6 +19,12 @@ public class WaitHelper
         return (new WebDriverWait(driver, Duration.ofSeconds(time))).until(ExpectedConditions.visibilityOfElementLocated(loctor));
     }
 
+    public static WebElement waitVisibilityOfElementLocatedAtFrame (WebDriver driver, By loctor, By frameLoctor, int time)
+    {
+        driver.switchTo().frame(driver.findElement(frameLoctor));
+        return (new WebDriverWait(driver, Duration.ofSeconds(time))).until(ExpectedConditions.visibilityOfElementLocated(loctor));
+    }
+
 
     /**
      * Wait methods for invisibility of Element presented on the page
